@@ -91,8 +91,8 @@ class StartingPage extends Component {
         if (this.state.CurrentWord != '' && this.state.allData[this.state.completedCount] != '') {
             this.state.completedWordsForHistory.push(this.state.CurrentWord);
             this.state.completedWordsScore.push(this.state.currentWordScore - 4);
-            this.state.colors[this.state.completedCount] = 'red';
-            this.state.currentWordAnswerStatus.push('red');
+            this.state.colors[this.state.completedCount] = '#fa4646';
+            this.state.currentWordAnswerStatus.push('#fa4646');
             this.state.colorsForAnswerList[this.state.completedCount] = this.state.currentWordAnswerStatus;
             this.state.completedWordAnswerList[this.state.completedCount] = this.state.currrentWordAnswerList
             this.setState({
@@ -132,8 +132,8 @@ class StartingPage extends Component {
             this.state.completedWordsForHistory.push(this.state.CurrentWord);
             this.state.completedWordsScore.push(this.state.currentWordScore + 10);
             this.state.completedWordAnswerList[this.state.completedCount] = this.state.currrentWordAnswerList
-            this.state.colors[this.state.completedCount] = 'green';
-            this.state.currentWordAnswerStatus.push('green');
+            this.state.colors[this.state.completedCount] = '#46fa64';
+            this.state.currentWordAnswerStatus.push('#46fa64');
             this.state.colorsForAnswerList[this.state.completedCount] = this.state.currentWordAnswerStatus;
             this.setState({
                 Score: this.state.Score + 10,
@@ -148,7 +148,8 @@ class StartingPage extends Component {
             this.state.completedWordsForHistory.push(this.state.CurrentWord);
             this.state.completedWordsScore.push(this.state.currentWordScore + 10);
             this.state.completedWordAnswerList[this.state.completedCount] = this.state.currrentWordAnswerList
-            this.state.currentWordAnswerStatus.push('green');
+            this.state.colors[this.state.completedCount] = '#46fa64';
+            this.state.currentWordAnswerStatus.push('#46fa64');
             this.state.colorsForAnswerList[this.state.completedCount] = this.state.currentWordAnswerStatus;
             this.setState({
                 Score: this.state.Score + 10,
@@ -159,7 +160,7 @@ class StartingPage extends Component {
             });
         }
         else {
-            this.state.currentWordAnswerStatus.push('red');
+            this.state.currentWordAnswerStatus.push('#fa4646');
             this.setState({
                 Score: this.state.Score - 2,
                 currentWordScore: this.state.currentWordScore - 2,
@@ -254,7 +255,7 @@ const styles = StyleSheet.create({
         flex: 1,
         margin: 4,
         flexDirection: 'column',
-        backgroundColor: 'white',
+        backgroundColor: '#fffff',
         borderRadius: 5
     },
     userInputPage: {
@@ -275,14 +276,12 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         padding: 3,
         fontSize: 20,
-        backgroundColor: 'white'
+        backgroundColor: '#ffff'
     },
     Guesses: {
         width: 'auto',
-        borderWidth: 2,
         marginTop: '1%',
-        backgroundColor: 'white',
-        borderColor: 'gray',
+        backgroundColor: '#fffff',
         borderRadius: 4,
         padding: 3
     }
