@@ -78,7 +78,7 @@ class Display extends Component {
                 </View>
                 <TouchableHighlight style={styles.WordsButton}
                     onPress={() => { this.handlesubmit(index) }}
-                ><Text style={{ color: 'white' }}>Hint</Text></TouchableHighlight>
+                ><Text style={{ color: '#FFFFFF' }}>Hint</Text></TouchableHighlight>
             </View>
         )
     }
@@ -226,15 +226,15 @@ const styles = StyleSheet.create({
         padding: 10,
         margin: 1,
         borderRadius: 7,
-        borderColor: 'gray',
+        borderColor: '#808080',
         borderWidth: 2
     },
     styles2: {
         padding: 10,
         margin: 1,
         borderRadius: 7,
-        backgroundColor: 'white',
-        borderColor: 'gray',
+        backgroundColor: '#FFFFFF',
+        borderColor: '#808080',
         borderWidth: 2
     },
     styles3: {
@@ -243,8 +243,8 @@ const styles = StyleSheet.create({
         padding: 10,
         margin: 1,
         borderRadius: 7,
-        backgroundColor: 'yellow',
-        borderColor: 'gray',
+        backgroundColor: '#fcf803',
+        borderColor: '#808080',
         borderWidth: 2
     },
 })
