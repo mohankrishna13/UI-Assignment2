@@ -19,9 +19,9 @@ class Historypage extends Component {
                     <View style={{ justifyContent: 'center', alignItems: 'center', margin: 5 }}>
                         <Text style={{ fontSize: 25 }}>History</Text>
                     </View>
-                    <Button style={styles.WordsButton} textStyle={{ fontSize: 18, color: 'white' }}
+                    <Button style={styles.WordsButton} textStyle={{ fontSize: 18, color: '#FFFFFF' }}
                         onPress={() => this.skipWord()}>
-                        Get New Word
+                        Get New Word (-4 points)
                         </Button>
                     <Button style={{ height: 35, width: 'auto' }} textStyle={{ fontSize: 15 }}
                         onPress={() => this.setIndex(this.props.completedWordsForHistory.length)}>
@@ -33,7 +33,7 @@ class Historypage extends Component {
                             {item}{this.props.completedWordsScore[index]}
                         </Button>
                     ))}
-                    <Button style={styles.WordsButton} textStyle={{ fontSize: 18, color: 'white' }}
+                    <Button style={styles.WordsButton} textStyle={{ fontSize: 18, color: '#FFFFFF' }}
                         onPress={() => this.resetGame()}>
                         Reset Game
                     </Button>
@@ -48,14 +48,14 @@ const styles = StyleSheet.create({
         borderRadius: 7,
         marginTop: 1,
         marginLeft: 2,
-        borderColor: 'gray',
+        borderColor: '#808080',
         borderWidth: 2
     },
     WordsButton: {
-        height: 40,
+        height: 48,
         width: 'auto',
         borderRadius: 8,
-        borderColor: 'white',
+        borderColor: '#FFFFFF',
         backgroundColor: '#1e90ff',
     }
 })
