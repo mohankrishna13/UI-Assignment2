@@ -8,6 +8,7 @@ class Historypage extends Component {
         this.state = {
             currentPositon: -1,
             currentSize:3,
+            skip:'Get New Word\n(-4 points)'
         }
     }
     skipWord = () => {
@@ -37,13 +38,13 @@ class Historypage extends Component {
                     <View style={{ justifyContent: 'center', alignItems: 'center', margin: 5 }}>
                         <Text style={{ fontSize: 25 }}>History</Text>
                     </View>
-                    <Button style={styles.WordsButton} textStyle={{ fontSize: 18, color: '#FFFFFF' }}
+                    <Button style={styles.WordsButton} textStyle={{ fontSize: 13, color: '#FFFFFF' }}
                         onPress={() => this.skipWord()}>
-                        Get New Word (-4 points)
+                        {this.state.skip}
                         </Button>
-                    <Button style={{ height: 35, width: 'auto',borderWidth:this.state.currentSize }} textStyle={{ fontSize: 15 }}
+                    <Button style={{ height: 35, width: '100%',borderWidth:this.state.currentSize }} textStyle={{ fontSize: 15 }}
                         onPress={() => this.setIndex(this.props.completedWordsForHistory.length)}>
-                        playing..{this.props.currentWordScore}
+                        playing:{this.props.currentWordScore}
                     </Button>
                     {this.props.completedWordsForHistory.map((item, index) => (
                         index === this.state.currentPosition ? (
@@ -58,7 +59,7 @@ class Historypage extends Component {
                         </Button>
                        )
                     ))}
-                    <Button style={styles.WordsButton} textStyle={{ fontSize: 18, color: '#FFFFFF' }}
+                    <Button style={styles.WordsButton} textStyle={{ fontSize: 13, color: '#FFFFFF' }}
                         onPress={() => this.resetGame()}>
                         Reset Game
                     </Button>
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
         borderWidth: 2
     },
     WordsButton: {
-        height: 48,
+        height: 40,
         width: 'auto',
         borderRadius: 8,
         borderColor: '#FFFFFF',
